@@ -1,0 +1,546 @@
+<?php
+session_start();
+
+// if(!isset($_SESSION['email'])){
+//     header("Location: index.php");
+//     exit();
+// }
+
+// $email = $_SESSION['email'];
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fonte navbar-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+
+    <!--icons remix-->
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="img/favicon-32x32.png"/>
+
+    <!--icons remix-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Poupe | Travel</title>
+</head>
+<body>
+
+<header class="header" id="header">
+        <nav class="nav container">
+            <h5>Poupe<br>Travel</h5>
+            
+            <a href="#" class="nav__logo"></a>
+            <div class="nav__menu" id="nav-menu" >
+                <ul class="nav__list">
+                    
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Inicio</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../view/cadastro.php" class="nav__link">Cadastra-se</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#place" class="nav__link">Lugares</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#membro" class="nav__link">Seja membro</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contato" class="nav__link">Contato</a>
+                </ul>
+
+                <div class="nav__dark">
+                    <span class="change-theme-name">Modo escuro</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+            
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home" id="home">
+            <img src="img/cancun.avif" alt="" class="home__img">
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__data-subtitle">Descubra seu lugar</span>
+                    <h1 class="home__data-title">Encontre os<br> Melhores preços<br> e a melhor <br> Organização aqui.</h1>
+                    <a href="#place" class="button">Explorar</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-circle-fill"></i>
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+
+                    <a href="https://twitter.com" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+
+                <div class="home__info">
+                    <div>
+                        <span class="home__info-title">3 melhores lugares para visitar</span>
+                        <a href="#discover" class="button button--flex button--link home__info-button">Mais <i class="ri-arrow-right-line"></i></a>
+                    </div>
+
+                    <div class="home__info-overlay">
+                        <img src="img/home2.jpg" class="home__info-img"></img>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+   
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title">Sobre</h2>
+                    <p class="about__description">Nós somos uma empresa que prioriza pela sua organização pessoal na hora de cuidar da sua viagem!<br> Quer viajar mas não conhece o seu destino?<br> Nós podemos te ajudar também! <br>Nosso site conta com uma página específica  de indicações para escolher destinos de viagens com o melhor preço para você.</p>
+                    <a href="../view/itinerario.php" class="button">Criar um Itinerário</a>
+                    <a href="#place" class="button">Pesquisar Destinos</a>
+                </div>
+                <div class="about__img">
+                <div class="about__img-overlay">
+                    <img src="img/about1.jpg" alt="" class="about__img-one">
+                </div>
+
+                <div class="about__img-overlay">
+                    <img src="img/about2.jpg" alt="" class="about__img-two">
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="discover section" id="discover">
+            <h2 class="section__title">Descubra os lugares <br> mais atraentes</h2>
+
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="discover__card swiper-slide">
+                        <img src="img/discover1.jpg" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Bali</h2>
+                            <span class="discover__description">24 passeios disponiveis</span>
+                        </div>
+                    </div>
+
+                    <div class="discover__card swiper-slide">
+                        <img src="img/discover2.png" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Las Vegas</h2>
+                            <span class="discover__description">15 passeios disponiveis</span>
+                        </div>
+                    </div>
+
+                    <div class="discover__card swiper-slide">
+                        <img src="img/discover3.jpg" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Hvar</h2>
+                            <span class="discover__description">18 passeios disponiveis</span>
+                        </div>
+                    </div>
+
+                    <div class="discover__card swiper-slide">
+                        <img src="img/discover4.png" alt="" class="discover__img">
+                        <div class="discover__data">
+                            <h2 class="discover__title">Museu do Louvre</h2>
+                            <span class="discover__description">32 passeios disponiveis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section">
+            <h2 class="section__title">Com nossa experiência <br> vamos atendê-lo</h2>
+
+            <div class="experience__container container grid">
+                <div class="experience__content grid">
+                    <div class="experience__data">
+                        <h2 class="experience__number">18</h2>
+                        <span class="experience__description">meses de <br> Experiência</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number">12</h2>
+                        <span class="experience__description">Passeios <br> Completos</span>
+                    </div>
+                    
+                    <div class="experience__data">
+                        <h2 class="experience__number">+10</h2>
+                        <span class="experience__description">Destinos <br> Turisticos</span>
+                    </div>
+                </div>
+                <div class="experience__img grid">
+                    <div class="experience__overlay">
+                        <img src="img/experience1.jpg" alt="" class="experience__img-one">
+                    </div>
+
+                    <div class="experience__overlay">
+                        <img src="img/experience2.jpg" alt="" class="experience__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="place section" id="place">
+            <h2 class="section__title">Escolha seu lugar</h2>
+
+            <div class="place__container container grid">
+                
+                <div class="place__card">
+                    <img src="img/place1.jpg" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon" style="color: #ffd43b;"></i></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Bali</h3>
+                            <span class="place__subtitle">Indonesia</span>
+                            <span class="place__price">$2499</span>
+                        </div>
+                    </div>
+                    <a href="../view/cadastro.php">
+                        <button class="button button--flex place__button" >
+                            <i class="ri-arrow-right-line"></i>
+                        </button>
+                    </a>
+                </div>
+            
+                
+                <div class="place__card">
+                    <img src="img/place2.jpg" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">5,0</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Bora Bora</h3>
+                            <span class="place__subtitle">Polinesia</span>
+                            <span class="place__price">$1599</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            
+                
+                <div class="place__card">
+                    <img src="img/place3.jpg" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,9</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Hawaii</h3>
+                            <span class="place__subtitle">EE.UU</span>
+                            <span class="place__price">$3499</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            
+                
+                <div class="place__card">
+                    <img src="img/place4.jpg" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Whitehaven</h3>
+                            <span class="place__subtitle">Australia</span>
+                            <span class="place__price">$2499</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            
+               
+                <div class="place__card">
+                    <img src="img/place5.jpg" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Hvar</h3>
+                            <span class="place__subtitle">Croacia</span>
+                            <span class="place__price">$1999</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+                <div class="place__card">
+                    <img src="img/place6.png" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Bocas Del Toro</h3>
+                            <span class="place__subtitle">Panamá</span>
+                            <span class="place__price">$1999</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+                <div class="place__card">
+                    <img src="img/place7.png" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Las Vegas</h3>
+                            <span class="place__subtitle">Nevada/ Condado de Clark- EUA</span>
+                            <span class="place__price">$1999</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+                <div class="place__card">
+                    <img src="img/place8.png" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Museu do Louvre</h3>
+                            <span class="place__subtitle">Paris/ França</span>
+                            <span class="place__price">$1999</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+
+                <div class="place__card">
+                    <img src="img/place9.png" alt="" class="place__img">
+            
+                    <div class="place__content">
+                        <span class="place__rating">
+                            <i class="ri-star-line place__rating-icon"></i>
+                            <span class="place__rating-number">4,8</span>
+                        </span>
+            
+                        <div class="place__data">
+                            <h3 class="place__title">Bocas Del Toro</h3>
+                            <span class="place__subtitle">Panamá</span>
+                            <span class="place__price">$1999</span>
+                        </div>
+                    </div>
+            
+                    <button class="button button--flex place__button">
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+                <a class="button" style="padding: 5px 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; width: 100px; height: 30px; border-radius: 5px; margin: auto;" href="../view/saiba.php">Saiba mais</a>
+            </div>
+        </section>
+        <section class="subscribe section" id="membro">
+            <div class="subscribe__bg">
+                <div class="subscribe__container container">
+                    <h2 class="section__title subscribe__title">Seja Membro <br> Para Mais Informações</h2>
+                    <p class="subscribe__description">Assine nossa página</p>
+
+                    <form action="" class="subscribe__form">
+                        <input type="text" placeholder="Seu Email" class="subscribe__input">
+
+                        <button class="button">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sponsor section">
+
+            <div class="sponsor__container container grid">
+            <h3>Parceiros:</h3><br>
+                <div class="sponsor__content">
+                    <img src="img/sponsors1.png" alt="" class="sponsor__img">
+                </div>
+
+                <div class="sponsor__content">
+                    <img src="img/sponsors2.png" alt="" class="sponsor__img">
+                </div>
+
+                <div class="sponsor__content">
+                    <img src="img/sponsors3.png" alt="" class="sponsor__img">
+                </div>
+
+                <div class="sponsor__content">
+                    <img src="img/sponsors4.png" alt="" class="sponsor__img">
+                </div>
+
+                <div class="sponsor__content">
+                    <img src="img/sponsors5.png" alt="" class="sponsor__img">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title" id="contato">Contato</h3><br>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="../view/contato.php" target="_blank" class="footer__social">
+                            <i class="ri-mail-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Sobre</h3>
+
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">Sobre nós</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Empresa</h3>
+
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#membro" class="footer__link">Seja um Membro</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Suporte</h3>
+
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">FAQ's</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">Central de Suporte</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__rights">
+                    <p class="footer__copy">&#169; 2023 . Todos os direitos reservados.</p>
+                    <div class="footer__terms">
+                        <a href="" class="footer__terms-link">Termos e acordos</a>
+                        <a href="" class="footer__terms-link">Politica de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Scroll up-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+    <!-- SCROLL REVEAL -->
+    <script src="js/scrollreveal.min.js"></script>
+    <!-- SWIPER JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <video id="video-file"></video><button  id="video-button"></button>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
